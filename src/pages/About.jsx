@@ -12,8 +12,8 @@ class About extends Component {
         <div className="flex">
           <div className="flex flex-col justify-start items-start">
             <SectionTitle text="About Me"/>
-            <h2 className="text-5xl font-black text-blue-800">SAGUNG PUTRI NARISWARI</h2>
-            <div className="contact flex gap-3 text-md mt-2 text-black">
+            <h2 className="md:text-5xl text-4xl font-black text-blue-800 text-start">SAGUNG PUTRI NARISWARI</h2>
+            <div className="contact flex gap-3 md:text-md text-sm mt-2 text-black">
               <p className="italic font-semibold text-black">Junior Frontend Developer </p> {' '} |
               <p className="text-gray-500">+62-81239328521</p>
               <p className="text-blue-600">sagungputri1530@gmail.com</p>
@@ -24,13 +24,20 @@ class About extends Component {
               Ea quaerat placeat incidunt beatae in officia repellat sunt ad! Culpa alias accusantium officia voluptatem laudantium laborum molestias. 
               Quibusdam et placeat doloribus.
             </p>
-            <div className="flex gap-5">
-              {sosmed.map(({link, image}) => {
+            <p className="text-gray-700 mt-5 underline underline-offset-4">Connect with me :</p>
+            <div className="flex gap-16 ml-16 mt-5">
+              <div>
                 <SosmedButton 
-                  link={link}
-                  imageURL={image}
+                    link="https://www.linkedin.com/in/sagungputrinrswari/" 
+                    imageURL="/public/icons/linkedin_logo.png" 
                 />
-              })}
+              </div>
+              <div>
+                <SosmedButton 
+                    link="https://github.com/sagungputri21" 
+                    imageURL="/public/icons/github_logo.png" 
+                />
+              </div>
             </div>
           </div>
         </div>

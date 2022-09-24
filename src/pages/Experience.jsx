@@ -1,37 +1,28 @@
 import React, { Component } from "react";
 import "@fortawesome/free-brands-svg-icons";
 import SectionTitle from "../components/title/SectionTitle";
-import SosmedButton from "../components/button/SosmedButton";
-import { sosmed } from "../data/sosmedData";
-
-class About extends Component {
+import { experience } from "../data/experienceData";
+import ExperienceSection from "../components/section/ExperienceSection";
+class Experience extends Component {
   render() {
-    // console.log(sosmed);
     return (
-      <section id="about" className="">
+      <section id="experience" className="">
         <div className="flex">
           <div className="flex flex-col justify-start items-start">
-            <SectionTitle text="About Me"/>
-            <h2 className="text-5xl font-black text-blue-800">SAGUNG PUTRI NARISWARI</h2>
-            <div className="contact flex gap-3 text-md mt-2 text-black">
-              <p className="italic font-semibold text-black">Junior Frontend Developer </p> {' '} |
-              <p className="text-gray-500">+62-81239328521</p>
-              <p className="text-blue-600">sagungputri1530@gmail.com</p>
-            </div>
-            <p className="mt-12 max-w-screen-xl text-gray-600 text-start">
-              I am a computer science student in Udayana University. 
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-              Ea quaerat placeat incidunt beatae in officia repellat sunt ad! Culpa alias accusantium officia voluptatem laudantium laborum molestias. 
-              Quibusdam et placeat doloribus.
-            </p>
-            <div className="flex gap-5">
-              {sosmed.map(({link, image}) => {
-                <SosmedButton 
-                  link={link}
-                  imageURL={image}
-                />
-              })}
-            </div>
+            <SectionTitle text="Experience" />
+            {/* experience 1 */}
+            <ExperienceSection 
+              title="Student Innovation Center (SIC) Udayana"
+              time="January 2022 - Present"
+              role="Frontend Developer"
+              desc={"Get opportunity to design and develop Luxury Villas website. Techstack : SvelteKit, Prismic CMS, and Tailwind. Used Figma to design the User Interface"}
+            />
+            <ExperienceSection 
+              title="Luxury Bali Rental"
+              time="April 2022-June 2022"
+              role="Freelance Web Developer"
+              desc={"Contributed to SIC WEb 2.0 for developing user interface with data fetching from REST API. Develop use Nextjs and Chakra UI for styling. Work together with UI/UX Designer and Backend Developer"}
+            />
           </div>
         </div>
       </section>
@@ -39,4 +30,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Experience;
