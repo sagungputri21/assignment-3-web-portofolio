@@ -14,17 +14,19 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className="App flex">
       <SideBar />
+      <div id="layout max-w-[1280px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
+          {/* <Route path="/education" element={<Education />} /> */}
           <Route path="/skills" element={<Skills />} />
           <Route path="/interest" element={<Interest />} />
-          <Route path="/awards" element={<Awards />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
+    </div>
     </div>
   );
 }

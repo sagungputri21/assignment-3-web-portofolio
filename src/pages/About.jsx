@@ -6,12 +6,11 @@ import { sosmed } from "../data/sosmedData";
 
 class About extends Component {
   render() {
-    // console.log(sosmed);
     return (
       <section id="about" className="">
+        <SectionTitle text="About Me"/>
         <div className="flex">
           <div className="flex flex-col justify-start items-start">
-            <SectionTitle text="About Me"/>
             <h2 className="md:text-5xl text-4xl font-black text-blue-800 text-start">SAGUNG PUTRI NARISWARI</h2>
             <div className="contact flex gap-3 md:text-md text-sm mt-2 text-black">
               <p className="italic font-semibold text-black">Junior Frontend Developer </p> {' '} |
@@ -26,18 +25,14 @@ class About extends Component {
             </p>
             <p className="text-gray-700 mt-5 underline underline-offset-4">Connect with me :</p>
             <div className="flex gap-16 ml-16 mt-5">
-              <div>
-                <SosmedButton 
-                    link="https://www.linkedin.com/in/sagungputrinrswari/" 
-                    imageURL="/public/icons/linkedin_logo.png" 
-                />
-              </div>
-              <div>
-                <SosmedButton 
-                    link="https://github.com/sagungputri21" 
-                    imageURL="/public/icons/github_logo.png" 
-                />
-              </div>
+              {sosmed.map(({ link, image }) => (
+                <div>
+                  <SosmedButton 
+                    link={link} 
+                    imageURL={image} 
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

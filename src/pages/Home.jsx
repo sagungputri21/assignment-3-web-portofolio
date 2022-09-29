@@ -1,12 +1,16 @@
 import React, { Component} from "react"
 import About from "./About";
+import Experience from "./Experience";
+import Interest from "./Interest";
+import Projects from "./Projects";
+import Skills from "./Skills";
 class Home extends Component {
     render() {
        return (
-        <div>
+        <div className="max-w-[1280px]">
           <section>
               <div className="flex flex-col items-center my-auto mt-10">
-                  <img src='/assets/gp.png' alt='photo-profile' className="w-60 h-64 p-2 border border-gray-300 shadow-md -rotate-3 mb-10 mx-auto"/>
+                  <img src='/assets/gp.png' alt='photo-profile' className="md:w-[225px] md:h-64 w-[200px] h-56 p-2 border border-gray-300 shadow-md -rotate-3 mb-10 mx-auto hover:scale-105"/>
                   <div className="text-black">
                     <h2 className="text-4xl font-semibold mb-5">Hello👋 Welcome to My Web Portofolio!</h2>
                     <p className="text-gray-600 p-1 md:text-xl text-lg">
@@ -16,8 +20,12 @@ class Home extends Component {
                     </p>
                   </div>
               </div>
-                <br/>
           </section>
+          <About />
+          <Experience />
+          <Interest />
+          <Projects />
+          <Skills />
         </div>
        )
     }   

@@ -4,7 +4,7 @@ import SectionTitle from "../components/title/SectionTitle";
 import SosmedButton from "../components/button/SosmedButton";
 import { sosmed } from "../data/sosmedData";
 
-class About extends Component {
+class Awards extends Component {
   render() {
     // console.log(sosmed);
     return (
@@ -41,4 +41,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Awards;
