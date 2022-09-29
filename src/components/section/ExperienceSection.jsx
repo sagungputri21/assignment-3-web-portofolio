@@ -13,12 +13,12 @@ class ExperienceSection extends Component {
             {time}
           </p>
         </div>
-        <p className="italic text-gray-700 text-[18px] mt-2">
-          {role}
-        </p>
-        <p className="text-gray-500 mt-5 w-full">
-          {desc}
-        </p>
+          <p className="italic text-gray-700 text-[18px] mt-2">
+            {role}
+          </p>
+          <p className="text-gray-500 mt-5 w-full">
+            {desc}
+          </p>
       </div>
     );
   }
